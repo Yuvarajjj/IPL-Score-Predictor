@@ -1,0 +1,74 @@
+<!-- templates/history.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction History</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(https://wallpapers.com/images/featured/ipl-2021-ix7zwgff29ylomuf.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background-color: #00cb70;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prediction History</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Batting Team</th>
+                <th>Bowling Team</th>
+                <th>Venue</th>
+                <th>Overs</th>
+                <th>Runs</th>
+                <th>Wickets</th>
+                <th>Runs in Prev 5</th>
+                <th>Wickets in Prev 5</th>
+                <th>Predicted Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for prediction in predictions %}
+                <tr>
+                    <td>{{ prediction.id }}</td>
+                    <td>{{ prediction.batting_team }}</td>
+                    <td>{{ prediction.bowling_team }}</td>
+                    <td>{{ prediction.venue }}</td>
+                    <td>{{ prediction.overs }}</td>
+                    <td>{{ prediction.runs }}</td>
+                    <td>{{ prediction.wickets }}</td>
+                    <td>{{ prediction.runs_in_prev_5 }}</td>
+                    <td>{{ prediction.wickets_in_prev_5 }}</td>
+                    <td>{{ prediction.predicted_score }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

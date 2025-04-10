@@ -30,7 +30,7 @@ IPL-Score-Predictor/
 
 1. Clone this repository:  
    ```bash
-   git clone https://github.com/yourusername/IPL-Score-Predictor.git  
+   git clone https://github.com/Yuvarajjj/IPL-Score-Predictor.git  
    cd IPL-Score-Predictor
 2. Create and activate a virtual environment:
    ```bash
